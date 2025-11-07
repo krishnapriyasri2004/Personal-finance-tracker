@@ -1,0 +1,177 @@
+.transaction-list {
+  width: 100%;
+}
+
+.empty-message {
+  text-align: center;
+  color: #94a3b8;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table thead {
+  background: #334155;
+  border-bottom: 2px solid #475569;
+}
+
+.transactions-table th {
+  padding: 1rem;
+  text-align: left;
+  color: #cbd5e1;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.transactions-table tbody tr {
+  border-bottom: 1px solid #334155;
+  transition: background 0.3s;
+}
+
+.transactions-table tbody tr:hover {
+  background: #334155;
+}
+
+.transactions-table td {
+  padding: 1rem;
+  color: #e2e8f0;
+}
+
+.transactions-table td.description {
+  font-weight: 500;
+}
+
+.transactions-table tr.income .amount {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.transactions-table tr.expense .amount {
+  color: #f87171;
+  font-weight: 600;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.category-badge.auto-tagged {
+  background: #06b6d4;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: #8b5cf6;
+  color: #fff;
+  border-radius: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.reclassify-btn,
+.delete-btn {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.reclassify-btn {
+  background: #06b6d4;
+  color: #fff;
+}
+
+.reclassify-btn:hover {
+  background: #0891b2;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.reclassify-inline {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.reclassify-inline select {
+  padding: 0.5rem;
+  background: #334155;
+  color: #e2e8f0;
+  border: 1px solid #3b82f6;
+  border-radius: 0.35rem;
+  font-size: 0.85rem;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.save-btn {
+  background: #4ade80;
+  color: #fff;
+}
+
+.cancel-btn {
+  background: #ef4444;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .transactions-table {
+    font-size: 0.9rem;
+  }
+
+  .transactions-table th,
+  .transactions-table td {
+    padding: 0.75rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .reclassify-btn,
+  .delete-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}
